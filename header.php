@@ -20,5 +20,9 @@
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/fontello.css'); ?>" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/normalize.css'); ?>" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/void.css'); ?>" />
+
+        <!-- JQuery -->
+        <!-- <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script> -->
+        <script src="<?php $this->options->themeUrl('js/jquery-3.4.1.min.js'); ?>"></script>
     </head>
     <body>

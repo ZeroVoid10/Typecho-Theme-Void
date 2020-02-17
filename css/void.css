@@ -2,8 +2,7 @@
 
 body, html {
     width: 100%;
-    min-height: 100%;
-    height: auto;
+    height: 100%;
     overflow-x: hidden;
 
     color: #777;
@@ -37,7 +36,6 @@ body {
 .app {
   position: relative;
   width: 100%;
-  height: auto;
   min-height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -88,6 +86,20 @@ body {
   line-height: 1.5;
 }
 
+.navbar-right {
+  margin-right: -15px;
+  height: 100%;
+}
+
+.login-panel {
+  width: 260px;
+  background-color: #f9f9f9;
+  margin-top: 0;
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
 .navbar-brand {
   display: inline-block;
   float: none;
@@ -113,6 +125,15 @@ body {
 .user-panel-bg {
   width: 100%;
   height: 64px;
+}
+
+.login-btn {
+  color: #fff;
+  background: #448bff linear-gradient(45deg, #448bff, #44e9ff);
+  border: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  transition: all .2s ease;
 }
 
 .user-name {
@@ -249,11 +270,26 @@ body {
   margin: 8px;
 }
 
+.post-blog {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pic-panel {
+  position: relative;
+  display: flex;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: rgba(249, 249, 249, .85)!important;
+  margin-bottom: 20px;
+}
+
 .main-asider {
   vertical-align: top;
   width: 240px;
   margin: 8px 0;
   border-radius: 6px;
+  z-index: -1;
 }
 
 .main-asider-header {
@@ -266,10 +302,12 @@ body {
 .app-footer {
   display: flex;
   justify-content: space-between;
+  z-index: -1;
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
+  margin-top: -50px;
 }
 
 .app-footer a:hover {
@@ -328,6 +366,11 @@ body {
   
   .navbar .nav > li > a {
     padding: 15px;
+  }
+
+  .navbar-right .dropdown-menu {
+    right: 0;
+    left: auto;
   }
 }
 
@@ -390,6 +433,10 @@ body {
   background-color: rgba(249, 249, 249, .85)!important;
 }
 
+.bg-white-s {
+  background-color: rgb(249, 249, 249)!important;
+}
+
 .bg-gray {
   color: #58666e;
   background-color: rgba(249, 249, 249, .15)!important;
@@ -405,7 +452,7 @@ body {
 
 .bg-black {
   color: #fff;
-  background-color: #1c2b36;
+  background-color: rgb(10, 9, 9);
 }
 
 .rounded {
@@ -415,6 +462,11 @@ body {
 .padder {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.padder-lg {
+  padding-left: 30px;
+  padding-right: 30px
 }
 
 .transparent {
@@ -443,6 +495,10 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+.btn-rounded {
+  border-radius: 50px;
 }
 
 #search_input {
@@ -498,8 +554,9 @@ button:focus {
   stroke-linejoin: round;
 }
 
-.navbar-right {
-  margin-right: -15px;
+
+.navbar-right .dropdown {
+  display: flex;
 }
 
 div {
@@ -521,10 +578,18 @@ a:hover {
   color: inherit;
 }
 
+label {
+  font-weight: 400;
+}
+
 .line {
   width: 100%;
   height: 1px;
   margin: 10px 0;
+}
+
+.box-shadow {
+  box-shadow: 0 1px 3px rgbd(0,0,0,.05);
 }
 
 .text-xs {
@@ -538,7 +603,7 @@ a:hover {
 .letterspace {
   letter-spacing: 2px;
 }
-
+dibu
 .m-t-sm {
   margin-top: 10px;
 }
@@ -553,6 +618,10 @@ a:hover {
 
 .m-b {
   margin-bottom: 15px;
+}
+
+.m-l-gap {
+  margin-left: 8px;
 }
 
 .no-margin {
@@ -589,6 +658,10 @@ a:hover {
 
 .h-w {
   width: 100%;
+}
+
+.h-h {
+  height: 100%;
 }
 
 .d-fl {
