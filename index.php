@@ -183,6 +183,7 @@ $this->need('header.php');
                                     <div class="nav-item-name">分类</div>
                                 </div>
                                 <i class="icon-angle-circled-right"></i>
+                                <i class="icon-angle-circled-down text-active"></i>
                             </a>
                             <ul class="nav-item-sub collapse no-padder" id="nav-item-sub-1" data-parent="#part">
                                 <li>
@@ -207,6 +208,7 @@ $this->need('header.php');
                                     <div class="nav-item-name">页面</div>
                                 </div>
                                 <i class="icon-angle-circled-right"></i>
+                                <i class="icon-angle-circled-down text-active"></i>
                             </a>
                             <ul class="nav-item-sub collapse no-padder" id="nav-item-sub-2" data-parent="#part">
                                 <li>
