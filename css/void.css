@@ -307,9 +307,8 @@ body {
 
 .app-content-body {
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 58px;
   display: flex;
-  margin-bottom: 8px;
 }
 
 .main-col {
@@ -583,10 +582,6 @@ body {
 .padder-lg {
   padding-left: 30px;
   padding-right: 30px
-}
-
-.transparent {
-  background: 0 0;
 }
 
 .input-group {

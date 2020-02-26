@@ -174,7 +174,7 @@ $this->need('header.php');
                     </li>
                     <div class="f-col h-w" id="part">
                     <!-- Categories -->
-                        <li class="nav-item no-border transparent" id="nav-item-1" data-target="#nav-item-sub-1" data-toggle="collapse">
+                        <li class="nav-item no-border" id="nav-item-1" data-target="#nav-item-sub-1" data-toggle="collapse">
                             <a class="no-border">
                                 <div>
                                     <div class="nav-icon">
@@ -183,7 +183,7 @@ $this->need('header.php');
                                     <div class="nav-item-name">分类</div>
                                 </div>
                                 <i class="icon-angle-circled-right"></i>
-                                <i class="icon-angle-circled-down text-active"></i>
+                                <i class="icon-angle-circled-down text-active" id="nav-item-icon" data-parent="#part"></i>
                             </a>
                             <ul class="nav-item-sub collapse no-padder" id="nav-item-sub-1" data-parent="#part">
                                 <li>
