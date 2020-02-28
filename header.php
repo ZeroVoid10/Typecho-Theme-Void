@@ -17,8 +17,10 @@
 
         <!-- Typecho Theme Void Style -->
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/bootstrap.min.css'); ?>" />
+        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/animate.min.css'); ?>" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/fontello.css'); ?>" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/normalize.css'); ?>" />
+        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/function.php'); ?>" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/void.css'); ?>" />
 
         <!-- JQuery -->

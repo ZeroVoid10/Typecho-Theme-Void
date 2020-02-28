@@ -638,6 +638,14 @@ body {
   border-bottom-right-radius: 0;
 }
 
+form button.active>span {
+  display: none;
+}
+
+.active>.text-active {
+  display: inline-block!important;
+}
+
 button:focus {
   outline: none;
 }
