@@ -271,19 +271,23 @@ $this->need('header.php');
                                 </li>
                             </ul>
                         </li>
-                        <?php if ($this->options->linksIndexNum != '' && $this->options->linksIndexNum != "0"): ?>
-                            <li class="nav-item">
-                                <a>
-                                    <div>
-                                        <div class="nav-icon">
-                                        <svg t="1581737046614" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="20305" width="16" height="16"><path d="M819.2 729.088V757.76c0 33.792-27.648 61.44-61.44 61.44H266.24c-33.792 0-61.44-27.648-61.44-61.44v-28.672c0-74.752 87.04-119.808 168.96-155.648 3.072-1.024 5.12-2.048 8.192-4.096 6.144-3.072 13.312-3.072 19.456 1.024C434.176 591.872 472.064 604.16 512 604.16c39.936 0 77.824-12.288 110.592-32.768 6.144-4.096 13.312-4.096 19.456-1.024 3.072 1.024 5.12 2.048 8.192 4.096 81.92 34.816 168.96 79.872 168.96 154.624z" p-id="20306"></path><path d="M359.424 373.76a168.96 152.576 90 1 0 305.152 0 168.96 152.576 90 1 0-305.152 0Z" p-id="20307"></path></svg>
-                                        </div>
-                                        <div class="nav-item-name">友链</div>
+
+                        <!-- 友链 -->
+                        <li class="nav-item no-border" id="nav-item-3" data-target="#nav-item-sub-3" data-toggle="collapse">
+                            <a class="no-border">
+                                <div>
+                                    <div class="nav-icon">
+                                    <svg t="1581737046614" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="20305" width="16" height="16"><path d="M819.2 729.088V757.76c0 33.792-27.648 61.44-61.44 61.44H266.24c-33.792 0-61.44-27.648-61.44-61.44v-28.672c0-74.752 87.04-119.808 168.96-155.648 3.072-1.024 5.12-2.048 8.192-4.096 6.144-3.072 13.312-3.072 19.456 1.024C434.176 591.872 472.064 604.16 512 604.16c39.936 0 77.824-12.288 110.592-32.768 6.144-4.096 13.312-4.096 19.456-1.024 3.072 1.024 5.12 2.048 8.192 4.096 81.92 34.816 168.96 79.872 168.96 154.624z" p-id="20306"></path><path d="M359.424 373.76a168.96 152.576 90 1 0 305.152 0 168.96 152.576 90 1 0-305.152 0Z" p-id="20307"></path></svg>
                                     </div>
-                                    <i class="icon-angle-circled-right"></i>
-                                </a>
-                            </li>
-                        <?php endif; ?>
+                                    <div class="nav-item-name">友链</div>
+                                </div>
+                                <i class="icon-angle-circled-right"></i>
+                                <i class="icon-angle-circled-down text-active"></i>
+                            </a>
+                            <ul class="nav-item-sub collapse no-padder" id="nav-item-sub-3" data-parent="#part">
+                                <a href="https://www.ihewro.com">友人C</a>
+                            </ul>
+                        </li>
                         <!--
                         <div class="line"></div>
                         <li class="padder m-t m-b-sm text-muted text-xs h-w">
