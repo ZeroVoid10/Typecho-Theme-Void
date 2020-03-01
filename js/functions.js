@@ -32,7 +32,6 @@ $.extend({
         body.on("click", ".message__close", function(event){
             out_func();
         });
-        console.log(_msg);
         _msg.auto_close && (timeout = setTimeout(function(){
             out_func();
         }, _msg.time));

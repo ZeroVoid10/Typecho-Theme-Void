@@ -92,13 +92,48 @@ body {
   height: 100%;
 }
 
-.login-panel {
-  width: 260px;
+.login-panel, 
+.setting-panel {
   background-color: #f9f9f9;
   margin-top: 0;
   border-radius: 6px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+
+.login-panel {
+  width: 260px;
+}
+
+.setting-panel {
+  width: 130px;
+  font-size: 14px;
+}
+
+.setting-panel ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 6px;
+}
+
+.setting-panel-item {
+  width: 100%;
+  fill: #777777;
+  line-height: 20px;
+}
+
+.setting-panel-item a{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.setting-panel-item a:hover {
+  background-color: rgba(177, 177, 177, .1)!important;
+  color: #00a1d6;
+  fill: #00a1d6;
 }
 
 .navbar-brand {
@@ -226,11 +261,13 @@ body {
   cursor: pointer;
 }
 
-.nav-item svg {
+.nav-item svg,
+.setting-panel-item svg {
   fill: inherit;
 }
 
-.nav-item svg:hover {
+.nav-item svg:hover,
+.setting-panel svg:hover {
   fill: #00a1d6;
 }
 
@@ -242,11 +279,12 @@ body {
 }
 
 .nav-icon {
-  display: block;
-  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   margin: -10px -10px;
-  margin-right: 5px;
+  margin-right: 0;
   line-height: 40px;
   text-align: center;
 }
@@ -642,6 +680,12 @@ form button.active>span {
   display: none;
 }
 
+.form-group .form-control:focus {
+  box-shadow: 0 0 0 .2rem rgba(68, 139, 255, .25);
+  border-color: #c4daff;
+  border-width: 1px;
+}
+
 .active>.text-active {
   display: inline-block!important;
 }
@@ -840,4 +884,12 @@ label {
 .no-border {
   border: none;
   border-radius: 0;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  border-top: 0;
 }

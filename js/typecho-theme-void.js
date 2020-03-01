@@ -1,21 +1,20 @@
 // Zero Void 2020-02-24 Mon
 
-$("#part").children("li").click(function(){
-    $(this).children("a").children("i").toggle();
-    if (!$(this).children().hasClass("show") || $(this).children().hasClass("collapsing")) {
-        var lastActived = $(this).parent().children("li") && $(this).parent().children("li").children(".show");
-        lastActived.parent().children("a").children("i").toggle();
-    }
-});
 
 (function($) {
+    $("#part").children("li").click(function(){
+        $(this).children("a").children("i").toggle();
+        if (!$(this).children().hasClass("show") || $(this).children().hasClass("collapsing")) {
+            var lastActived = $(this).parent().children("li") && $(this).parent().children("li").children(".show");
+            lastActived.parent().children("a").children("i").toggle();
+        }
+    })
     // login
-    $("#login-button").click(function(event) {
-        // $("#login-button").attr("disabled", !0).fadeTo("slow", .5);
+    $("#loginform").submit(function(event) {
         function login_enable() {
             $("#login-button").attr("disabled", !1).fadeTo("slow", 1);
         }
-        // event.preventDefault();
+        event.preventDefault();
         $("#login-button").attr("disabled", !0).fadeTo("slow", .5);
         var username = $("#login-username").val(),
             password = $("#login-password").val();
@@ -43,6 +42,7 @@ $("#part").children("li").click(function(){
         $("#login-button").addClass("active");
         $("#login-spin").addClass("d-inline-block");
 
+        console.log($(this).serializeArray());
         $.ajax({
             url: $(this).attr("action"),
             type: $(this).attr("method"),
@@ -51,12 +51,13 @@ $("#part").children("li").click(function(){
                 $.message({
                     title: ThemeConst.LOGIN_TITLE,
                     message: ThemeConst.LOGIN_SUBMIT_ERROR,
-                    type: "error"
+                    type: "error",
                 });
                 login_enable();
                 return 1;
             },
             success: function(data) {
+                // console.log(data);
                 data = $.parseHTML(data);
                 $("#login-button").removeClass("active");
                 $("#login-spin").removeClass("d-inline-block");
@@ -65,7 +66,7 @@ $("#part").children("li").click(function(){
                         $.message({
                             title: ThemeConst.LOGIN_TITLE,
                             message: ThemeConst.LOGIN_SUBMIT_INFO,
-                            type: "error"
+                            type: "error",
                         });
                         login_enable();
                         return 1;

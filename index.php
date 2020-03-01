@@ -1,5 +1,15 @@
-<!-- Include header -->
 <?php 
+/**
+ * 简单的typecho主题 tyepcho-theme-void
+ * 首页页面布局参考 handsome:https://www.ihewro.com/archives/489/
+ * 当前版本仅实现最最最基础的功能(登入,登出)
+ *
+ * @author Zero Void
+ * @version 0.0.1
+ * @link https://github.com/ZeroVoid10/typecho-theme-void
+ */
+
+ // Include header
 $this->need('header.php');
 ?>
 
@@ -11,8 +21,6 @@ $this->need('header.php');
             style="background-image: url(<?php $this->options->themeUrl('img/bg_pic.jpg'); ?>)"
         <?php endif; ?>>
     </div>
-
-    <!-- <script><?php print_r($this->user); ?></script> -->
 
     <!-- Main Body -->
     <div class="app">
@@ -47,37 +55,68 @@ $this->need('header.php');
                         <svg t="1581672480337" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7707" width="16" height="16"><path d="M881.066667 140.8c14.933333 2.133333 42.666667 32 44.8 44.8v524.8c-2.133333 12.8-29.866667 42.666667-44.8 44.8H637.866667l-17.066667 17.066667-108.8 108.8-96-106.666667-17.066667-19.2H138.666667c-14.933333-2.133333-42.666667-32-44.8-44.8V185.6c2.133333-12.8 29.866667-42.666667 44.8-44.8h742.4m2.133333-55.466667H140.8C100.266667 85.333333 42.666667 142.933333 42.666667 185.6v524.8C42.666667 750.933333 100.266667 810.666667 140.8 810.666667h234.666667l136.533333 149.333333 149.333333-149.333333h219.733334c40.533333 0 98.133333-57.6 98.133333-100.266667V185.6c2.133333-42.666667-55.466667-100.266667-96-100.266667z" p-id="7708"></path><path d="M251.733333 386.133333c-34.133333 0-61.866667 27.733333-61.866666 61.866667 0 34.133333 27.733333 61.866667 61.866666 61.866667s61.866667-27.733333 61.866667-61.866667c0-34.133333-27.733333-61.866667-61.866667-61.866667zM524.8 386.133333c-34.133333 0-61.866667 27.733333-61.866667 61.866667 0 34.133333 27.733333 61.866667 61.866667 61.866667 34.133333 0 61.866667-27.733333 61.866667-61.866667 0-34.133333-27.733333-61.866667-61.866667-61.866667zM795.733333 386.133333c-34.133333 0-61.866667 27.733333-61.866666 61.866667 0 34.133333 27.733333 61.866667 61.866666 61.866667 34.133333 0 61.866667-27.733333 61.866667-61.866667 0-34.133333-27.733333-61.866667-61.866667-61.866667z" p-id="7709"></path></svg>
                         </a>
                     </li>
+                    <li class="dropdown" id="login-entry">
                     <?php if ($this->user->hasLogin()): ?>
-                    <li class="dropdown" id="logged-entry">
-                        <a href="" id="logged-in">
+                        <a href="" id="logged-in" on-click="return false" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
                         <svg t="1582791775030" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1815" width="16" height="16"><path d="M783.68 171.626667l160.426667 276.266666a128 128 0 0 1 0.170666 128.298667l-160.64 278.272a128 128 0 0 1-110.869333 64H351.232a128 128 0 0 1-110.848-64l-160.64-278.272a128 128 0 0 1 0.149333-128.277333l160.426667-276.266667a128 128 0 0 1 110.698667-63.744h321.962666a128 128 0 0 1 110.698667 63.722667z m-110.698667 0.277333H351.018667a64 64 0 0 0-55.338667 31.872l-160.448 276.266667a64 64 0 0 0-0.085333 64.149333l160.661333 278.272a64 64 0 0 0 55.424 32h321.536a64 64 0 0 0 55.424-32l160.64-278.272a64 64 0 0 0-0.064-64.149333l-160.426667-276.266667a64 64 0 0 0-55.36-31.872zM512 650.666667a138.666667 138.666667 0 1 1 0-277.333334 138.666667 138.666667 0 0 1 0 277.333334z m0-64a74.666667 74.666667 0 1 0 0-149.333334 74.666667 74.666667 0 0 0 0 149.333334z" p-id="1816"></path></svg>
                         </a>
-                    </li>
+                        <div class="dropdown-menu animated fadeIn no-padder font-gray setting-panel bg-white" aria-labelledby="logged-in">
+                            <ul>
+                                <li class="setting-panel-item">
+                                    <div>
+                                        <a href="<?php $this->options->adminUrl(); ?>">
+                                            <div>
+                                                <div class="nav-icon">
+                                                    <svg t="1582986768288" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2464" width="16" height="16"><path d="M670.293333 542.293333a256 256 0 1 0-316.586666 0 426.666667 426.666667 0 0 0-265.386667 349.013334 42.666667 42.666667 0 0 0 85.333333 9.386666 341.333333 341.333333 0 0 1 678.4 0 42.666667 42.666667 0 0 0 42.666667 37.973334h4.693333a42.666667 42.666667 0 0 0 37.546667-46.933334 426.666667 426.666667 0 0 0-266.666667-349.44zM512 512a170.666667 170.666667 0 1 1 170.666667-170.666667 170.666667 170.666667 0 0 1-170.666667 170.666667z" p-id="2465"></path></svg>
+                                                </div>
+                                                <div class="nav-name">
+                                                    <?php _e('后台'); ?>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="setting-panel-item">
+                                    <div>
+                                        <a href="<?php $this->options->logoutUrl(); ?>">
+                                            <div>
+                                                <div class="nav-icon">
+                                                    <svg t="1582988706978" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3300" width="16" height="16"><path d="M298.666667 256a42.666667 42.666667 0 0 0 0-85.333333H213.333333a42.666667 42.666667 0 0 0-42.666666 42.666666v597.333334a42.666667 42.666667 0 0 0 42.666666 42.666666h85.333334a42.666667 42.666667 0 0 0 0-85.333333H256V256zM888.32 487.253333l-120.32-170.666666a42.666667 42.666667 0 0 0-59.306667-10.24 42.666667 42.666667 0 0 0-10.24 59.733333L771.84 469.333333H426.666667a42.666667 42.666667 0 0 0 0 85.333334h341.333333l-76.8 102.4a42.666667 42.666667 0 0 0 8.533333 59.733333 42.666667 42.666667 0 0 0 25.6 8.533333 42.666667 42.666667 0 0 0 34.133334-17.066666l128-170.666667a42.666667 42.666667 0 0 0 0.853333-50.346667z" p-id="3301"></path></svg>
+                                                </div>
+                                                <div class="nav-name">
+                                                    <?php _e('退出'); ?>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     <?php else: ?>
-                        <li class="dropdown" id="login-entry">
-                            <a href="#" on-click="return flase" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" id="loginMenu">
+                            <a href="#" on-click="return false" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" id="loginMenu">
                                 <svg t="1581669254554" class="icon" viewBox="0 0 1024 1024" stroke="currentColor" stroke-width="2" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6854" width="16" height="16"><path d="M975.626636 981.454752c0 23.312464-18.649972 41.962436-41.962436 41.962436s-41.962436-18.649972-41.962436-41.962436l-0.582811-4.079681c0-1.748435 0.582812-3.49687 0.582811-4.662493-26.226522-183.585657-183.585657-318.797951-375.913489-321.129197h-9.324985c-189.996585 2.331246-346.190097 134.04667-374.747866 314.71827 1.165623 3.49687 1.748435 6.993739 1.748435 11.07342l0.582811 4.079681c0 23.312464-19.232783 42.545248-42.545247 42.545248s-42.545248-19.232783-42.545248-42.545248v-0.582811h-0.582811c0-1.165623 0.582812-2.331246 0.582811-3.49687 0-3.49687 0.582812-6.993739 1.165624-9.907797 21.56403-169.598179 135.212294-306.558907 290.240182-365.42288C250.608993 544.346044 191.74502 442.354013 191.74502 326.374502c0-180.671599 139.874787-326.374502 319.963574-326.374502s319.963574 145.702903 319.963574 325.79169c0 116.562322-58.863973 217.971542-148.61696 275.669892 153.279454 58.281161 266.344906 194.076266 289.65737 361.92601 1.748435 4.662493 2.914058 9.324986 2.914058 13.987479v4.079681zM758.237906 325.79169c0-136.377917-110.151394-246.529311-246.529312-246.529311S265.179283 189.413773 265.179283 325.79169s110.151394 246.529311 246.529311 246.529312c135.795105 0 246.529311-110.151394 246.529312-246.529312z" p-id="6855"></path></svg>
                             </a>
                             <div class="dropdown-menu login-panel wrapper animated fadeIn bg-white-s font-gray" aria-labelledby="loginMenu">
                                 <form id="loginform" action="<?php $this->options->loginAction(); ?>" method="post" role="form" name="login">
                                     <div class="form-group">
                                         <label for="login-username">用户名</label>
-                                        <input type="text" class="form-control" id="login-username" placeholder="用户名或电子邮箱">
+                                        <input type="text" class="form-control" name="name" id="login-username" placeholder="用户名或电子邮箱">
                                     </div>
                                     <div class="form-group">
                                         <label for="login-password">密码</label>
-                                        <input type="password" class="form-control" id="login-password" placeholder="密码">
+                                        <input type="password" class="form-control" name="password" id="login-password" placeholder="密码">
                                     </div>
-                                    <button class="h-w padder-lg btn-rounded login-btn" id="login-button" type="button">
+                                    <button class="h-w padder-lg btn-rounded login-btn" id="login-button" type="submit">
                                         <span>登入</span>
                                         <span class="text-active">登入中...</span>
                                         <i class="animate-spin icon-spin5 d-none" id="login-spin"></i>
                                     </button>
-                                    <input type="hidden" name="referer" value="<?php echo htmlspecialchars($this->request->get('referer')); ?>" />
+                                    <!-- <input type="hidden" name="referer" value="<?php echo htmlspecialchars($this->request->get('referer')); ?>" /> -->
+                                    <input type="hidden" name="referer" value="<?php $this->options->siteUrl(); ?>" />
                                 </form>
                             </div>
-                        </li>
                     <?php endif; ?>
+                        </li>
 
                 </ul>
             </div>

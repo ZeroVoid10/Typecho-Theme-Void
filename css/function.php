@@ -7,7 +7,8 @@
     padding: 14px 26px 14px 13px;
     position: fixed;
     top: 16px;
-    right: 16px;
+    right: 0;
+    margin-right: 16px;
     z-index: 2000;
     width: 300px;
     background-color: #fff;
