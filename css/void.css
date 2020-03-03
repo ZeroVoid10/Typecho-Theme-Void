@@ -68,9 +68,28 @@ body {
   height: 50px;
 }
 
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-item {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #777777;
+}
+
+.navbar-item a {
+  padding: 15px;
+  cursor: pointer;
+  height: 100%;
+}
+
+
 .navbar {
-  padding-left: 15px;
-  padding-right: 15px;
+  display: none;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -141,11 +160,12 @@ body {
   float: none;
   height: auto;
   padding: 0 20px;
+  margin-right: 0;
 }
 
 .navbar-brand img {
   height: 100%;
-  width: 100%;
+  max-width: 200px;
 }
 
 .app-asider {
@@ -154,6 +174,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  max-width: 220px;
 }
 
 .asider-wrapper {
@@ -486,6 +507,12 @@ body {
   .app-header {
     max-width: 750px;
   }
+  .app-header .navbar {
+    display: flex;
+    height: auto!important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .app-asider,
   .navbar-header {
     width: 200px;
@@ -517,6 +544,37 @@ body {
   .navbar-right .dropdown-menu {
     right: 0;
     left: auto;
+  }
+  .hidden-sm {
+    /* 大于sm时隐藏 */
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    overflow: hidden;
+  }
+  .test+* {
+    position: fixed;
+  }
+  .main-col {
+    width: 100%;
+  }
+  .pop-l-sm {
+    /* 小于sm时隐藏, 且会弹出 */
+    display: none!important;
+  }
+  .move-right {
+    transform: translate3d(220px, 0, 0);
+    transition: transform 1s ease;
+  }
+  .move-left {
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s ease;
+  }
+  .footer {
+    margin-right: 8px;
   }
 }
 
@@ -701,17 +759,20 @@ button:focus {
 }
 
 .bg-black .nav > li > a:focus,
-.bg-black .nav > li > a:hover {
+.bg-black .nav > li > a:hover,
+.bg-black .navbar-item > a:hover {
   background-color: #000;
   color: #fff;
 }
 
-.bg-black .nav > li > a {
+.bg-black .nav > li > a,
+.bg-black .navbar-item > a {
   color: #777777;
 }
 
-.bg-black .nav > li > a > svg {
-  fill: currentColor;
+.bg-black .nav > li > a > svg,
+.bg-black .navbar-item > a > svg {
+  fill: currentColor!important;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -727,8 +788,8 @@ div {
 }
 
 img {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 a {
@@ -864,6 +925,10 @@ label {
   display: flex;
 }
 
+.d-n {
+  display: none!important;
+}
+
 .f-right {
   float: right;
 }
@@ -892,4 +957,29 @@ label {
 
 .dropdown-menu {
   border-top: 0;
+}
+
+.margin-left {
+  margin-left: 220px;
+}
+
+.rotate-cw-180 {
+  transform: rotate(180deg);
+  transition: transform 1s ease;
+}
+
+.rotate-0 {
+  transform: rotate(0deg);
+  transition: transform 1s ease;
+}
+
+.show-main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1020;
+  display: none;
+  cursor: pointer;
 }

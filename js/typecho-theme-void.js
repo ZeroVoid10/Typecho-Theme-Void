@@ -2,6 +2,57 @@
 
 
 (function($) {
+    // 小窗口左右侧边栏弹出
+    // FIXME: 短时间多次调用会出现显示过程异常
+    var pop_left_panel = function(){
+        var asider = $("#app-asider");
+        var col = $(".app-content"), 
+            footer = $(".app-footer");
+        $(".show-main").toggle();
+        if (asider.hasClass("pop-l-sm")) {
+            col.removeClass("move-left");
+            footer.removeClass("move-left");
+            $("#pop-left-panel>a>svg").removeClass("rotate-0");
+
+            asider.addClass("slideInLeft");
+            col.addClass("move-right");
+            footer.addClass("move-right");
+            asider.toggleClass("pop-l-sm");
+            $("#pop-left-panel>a>svg").addClass("rotate-cw-180");
+            setTimeout(function(){
+                asider.removeClass("slideInLeft");
+            }, 1000);
+        } else {
+            col.removeClass("move-right");
+            footer.removeClass("move-right");
+            $("#pop-left-panel>a>svg").removeClass("rotate-cw-180");
+
+            asider.addClass("slideOutLeft");
+            col.addClass("move-left");
+            footer.addClass("move-left");
+            $("#pop-left-panel>a>svg").addClass("rotate-0");
+            setTimeout(function(){
+                asider.toggleClass("pop-l-sm");
+                asider.removeClass("slideOutLeft");
+            }, 1000);
+        }
+    }
+    $("#pop-left-panel").click(pop_left_panel);
+    // $("#pop-right-panel").click(pop_right_panel);
+    $(".show-main").click(pop_left_panel);
+
+    $(window).resize(function() {
+        console.log($(window).width());
+        if ($(window).width() > 768 && $(".app-content").hasClass("move-right")) {
+            $(".app-content").removeClass("move-right");
+            $(".app-footer").removeClass("move-right");
+        }
+        if ($(window).width() <= 768 && ) {
+            $("#app-asider").addClass("pop-l-sm");
+        }
+    })
+
+    // 手风琴侧边栏 icon转换
     $("#part").children("li").click(function(){
         $(this).children("a").children("i").toggle();
         if (!$(this).children().hasClass("show") || $(this).children().hasClass("collapsing")) {
@@ -9,6 +60,7 @@
             lastActived.parent().children("a").children("i").toggle();
         }
     })
+
     // login
     $("#loginform").submit(function(event) {
         function login_enable() {

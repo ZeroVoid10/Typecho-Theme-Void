@@ -27,9 +27,29 @@ $this->need('header.php');
         <!-- header -->
         <div class="app-header">
             <div class="bg-black navbar-header">
+          <!-- <li class="nav-item no-border" id="nav-item-1" data-target="#nav-item-sub-1" data-toggle="collapse"> -->
+          <!-- <ul class="nav-item-sub collapse no-padder" id="nav-item-sub-1" data-parent="#part"> -->
+                <!-- <li class="hidden-sm navbar-item" id="pop-left-panel" data-target="#app-asider" data-toggle="collapse"> -->
+                <li class="hidden-sm navbar-item" id="pop-left-panel">
+                    <a>
+                    <svg t="1583114224147" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2374" width="16" height="16"><path d="M892.8 163.4H322.6c-35.1 0-63.9 28.8-63.9 63.9 0 35.1 28.8 63.9 63.9 63.9h570.2c35.1 0 63.9-28.8 63.9-63.9 0-35.1-28.8-63.9-63.9-63.9zM892.8 448.4H322.6c-35.1 0-63.9 28.8-63.9 63.9 0 35.1 28.8 63.9 63.9 63.9h570.2c35.1 0 63.9-28.8 63.9-63.9 0-35.1-28.8-63.9-63.9-63.9zM892.8 735.9H322.6c-35.1 0-63.9 28.8-63.9 63.9 0 35.1 28.8 63.9 63.9 63.9h570.2c35.1 0 63.9-28.8 63.9-63.9 0-35.1-28.8-63.9-63.9-63.9zM130.1 164.4c-34.7 0-63 28.4-63 63v1.8c0 34.7 28.4 63 63 63 34.7 0 63-28.4 63-63v-1.8c0-34.6-28.3-63-63-63zM130.1 449.4c-34.7 0-63 28.4-63 63v1.8c0 34.7 28.4 63 63 63 34.7 0 63-28.4 63-63v-1.8c0-34.6-28.3-63-63-63zM130.1 736.9c-34.7 0-63 28.4-63 63v1.8c0 34.7 28.4 63 63 63 34.7 0 63-28.4 63-63v-1.8c0-34.6-28.3-63-63-63z" p-id="2375"></path></svg>
+                    </a>
+                </li>
                 <a href="/" class="navbar-brand">
                     <img src="<?php $this->options->themeUrl('img/my-long-logo.png') ?>" alt="logo">
                 </a>
+                <div>
+                    <li class="hidden-sm navbar-item">
+                        <a href="">
+                            <svg t="1581598687040" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1756" width="16" height="16"><path d="M400.696889 801.393778A400.668444 400.668444 0 1 1 400.696889 0a400.668444 400.668444 0 0 1 0 801.393778z m0-89.031111a311.637333 311.637333 0 1 0 0-623.331556 311.637333 311.637333 0 0 0 0 623.331556z" p-id="1757"></path><path d="M667.904 601.998222l314.766222 314.823111-62.919111 62.976-314.823111-314.823111z" p-id="1758"></path></svg>
+                        </a>
+                    </li>
+                    <li class="hidden-sm navbar-item" id="pop-right-panel">
+                        <a href="">
+                        <svg t="1583114224147" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2374" width="16" height="16"><path d="M892.8 163.4H322.6c-35.1 0-63.9 28.8-63.9 63.9 0 35.1 28.8 63.9 63.9 63.9h570.2c35.1 0 63.9-28.8 63.9-63.9 0-35.1-28.8-63.9-63.9-63.9zM892.8 448.4H322.6c-35.1 0-63.9 28.8-63.9 63.9 0 35.1 28.8 63.9 63.9 63.9h570.2c35.1 0 63.9-28.8 63.9-63.9 0-35.1-28.8-63.9-63.9-63.9zM892.8 735.9H322.6c-35.1 0-63.9 28.8-63.9 63.9 0 35.1 28.8 63.9 63.9 63.9h570.2c35.1 0 63.9-28.8 63.9-63.9 0-35.1-28.8-63.9-63.9-63.9zM130.1 164.4c-34.7 0-63 28.4-63 63v1.8c0 34.7 28.4 63 63 63 34.7 0 63-28.4 63-63v-1.8c0-34.6-28.3-63-63-63zM130.1 449.4c-34.7 0-63 28.4-63 63v1.8c0 34.7 28.4 63 63 63 34.7 0 63-28.4 63-63v-1.8c0-34.6-28.3-63-63-63zM130.1 736.9c-34.7 0-63 28.4-63 63v1.8c0 34.7 28.4 63 63 63 34.7 0 63-28.4 63-63v-1.8c0-34.6-28.3-63-63-63z" p-id="2375"></path></svg>
+                        </a>
+                    </li>
+                </div>
             </div>
             <div class="navbar bg-black">
                 <form class="navbar-form">
@@ -123,7 +143,7 @@ $this->need('header.php');
         </div>
 
         <!-- asider -->
-        <div class="app-asider bg-white font-gray">
+        <div class="app-asider bg-white font-gray animated" id="app-asider">
             <div class="asider-wrapper scroll-y scroll-hide">
                 <div class="user-panel">
                     <div class="user-panel-bg">
@@ -376,7 +396,7 @@ $this->need('header.php');
                         <?php endwhile; ?>
                     </div>
                 </div>
-                <div class="main-asider bg-white">
+                <div class="main-asider bg-white pop-l-sm">
                     <div class="main-asider-header">
                         <div class="h-w text-center">
                             <div class="col-4 p-b-lg p-t-lg icon">
@@ -391,12 +411,13 @@ $this->need('header.php');
                         </div>
                     </div>
                 </div>
+                <a class="show-main"></a>
             </main>
         </div>
 
         <!-- footer -->
         <div class="app-footer">
-            <div class="bg-white wrapper h-w m-l-gap border-radius">
+            <div class="bg-white wrapper h-w m-l-gap border-radius footer">
                 <div class="bg-gray f-between h-w">
                     <div>Copyright &copy 2020</div>
                     <div>
