@@ -1,4 +1,26 @@
 
+        <!-- footer -->
+        <div class="app-footer">
+            <div class="bg-white wrapper h-w m-l-gap border-radius footer">
+                <div class="bg-gray f-between h-w">
+                    <div>Copyright &copy 2020</div>
+                    <div>
+                        <a href="">京ICP备</a>
+                        &nbspPower By&nbsp
+                        <a href="">Typecho</a>
+                        &nbsp| Theme By&nbsp
+                        <a href="">Void</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side-btn">
+                <div class="btn">
+                    <i class="icon-angle-circled-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <!-- ThemeConst Values -->
 <script type="text/javascript">
     window['ThemeConst'] = {

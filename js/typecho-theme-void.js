@@ -47,7 +47,7 @@
             $(".app-content").removeClass("move-right");
             $(".app-footer").removeClass("move-right");
         }
-        if ($(window).width() <= 768 && ) {
+        if ($(window).width() <= 768) {
             $("#app-asider").addClass("pop-l-sm");
         }
     })
