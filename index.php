@@ -401,43 +401,59 @@ $this->need('header.php');
                 <div class="main-asider bg-white pop-m">
                     <div class="widget-tabs">
                         <div class="main-asider-header ">
-                            <ul class="h-w text-center nav nav-tabs tablist" role="tablist">
-                                <li class="col-4 icon nav-item" data-index="0" role="presentation">
-                                    <a id="wideget-hot-tab" class="active" data-toggle="tab" href="#widget-tabs-hot" role="tab" aria-controls="widget-tabs-hot" aria-expand="true">
+                            <ul id="widget-tabs" class="h-w text-center nav nav-tabs tabs-black tablist f-row" role="tablist">
+                                <li class="col-4 icon nav-item">
+                                    <a id="widget-hot-tab" class="active" data-toggle="tab" href="#widget-tabs-hot" role="tab" aria-controls="widget-tabs-hot" aria-expand="true">
                                         <div class="wrapper-sm asider-icon">
                                             <svg t="1581775950267" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5354" width="16" height="16"><path d="M908.4928 381.7472H655.36C753.4592 18.6368 587.776 0 587.776 0c-70.2464 0-55.6032 55.7056-60.928 65.024 0 177.5616-188.2112 316.7232-188.2112 316.7232v503.5008c0 49.7664 67.584 67.584 94.208 67.584H813.056c35.84 0 65.024-94.0032 65.024-94.0032 94.0032-320.7168 94.0032-416.1536 94.0032-416.1536 0-66.2528-63.488-60.928-63.488-60.928z m-673.6896 0.1024H83.2512c-31.3344 0-31.744 30.8224-31.744 30.8224l31.232 507.904c0 32.256 32.256 32.256 32.256 32.256h131.2768c27.2384 0 27.0336-21.2992 27.0336-21.2992V420.352c0-38.912-38.5024-38.5024-38.5024-38.5024z" p-id="5355"></path></svg>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="col-4 icon nav-item" data-index="1" role="presentation">
-                                    <a id="wideget-comment-tab" data-toggle="tab" href="#widget-tabs-comment" role="tab" aria-controls="widget-tabs-comment" aria-expand="false">
+                                <li class="col-4 icon nav-item" role="presentation">
+                                    <a id="widget-comment-tab" data-toggle="tab" href="#widget-tabs-comment" role="tab" aria-controls="widget-tabs-comment" aria-expand="false">
                                         <div class="wrapper-sm asider-icon">
                                             <svg t="1581841263700" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6526" width="16" height="16"><path d="M897.6 196.8 108.8 196.8c-25.6 0-46.4 20.8-46.4 46.4l0 488c0 25.6 20.8 46.4 46.4 46.4l128 0 6.4 142.4 126.4-142.4 526.4 0c25.6 0 46.4-20.8 46.4-46.4L942.4 243.2C944 217.6 923.2 196.8 897.6 196.8zM209.6 544c-36.8 0-68.8-30.4-68.8-68.8 0-36.8 30.4-68.8 68.8-68.8 36.8 0 68.8 30.4 68.8 68.8C276.8 513.6 246.4 544 209.6 544zM481.6 544c-36.8 0-68.8-30.4-68.8-68.8 0-36.8 30.4-68.8 68.8-68.8 36.8 0 68.8 30.4 68.8 68.8C548.8 513.6 518.4 544 481.6 544zM753.6 544c-36.8 0-68.8-30.4-68.8-68.8 0-36.8 30.4-68.8 68.8-68.8 36.8 0 68.8 30.4 68.8 68.8C820.8 513.6 790.4 544 753.6 544z" p-id="6527"></path></svg>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="col-4 icon nav-item " data-index="2" role="presentation">
-                                    <a id="wideget-comment-random" data-toggle="tab" href="#widget-tabs-random" role="tab" aria-controls="widget-tabs-random" aria-expand="false">
+                                <li class="col-4 icon nav-item " role="presentation">
+                                    <a id="widget-random-tab" data-toggle="tab" href="#widget-tabs-random" role="tab" aria-controls="widget-tabs-random" aria-expand="false">
                                         <div class="wrapper-sm asider-icon">
                                             <svg t="1581841219696" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5967" width="16" height="16"><path d="M380.563302 274.870857q-34.304 52.589714-78.262857 156.013714-12.580571-25.746286-21.138286-41.398857t-23.113143-36.278857-29.110857-32.256-35.986286-19.968-46.592-8.265143l-128 0q-7.972571 0-13.165714-5.12t-5.12-13.165714l0-109.714286q0-7.972571 5.12-13.165714t13.165714-5.12l128 0q142.848 0 234.276571 128.585143zM1024.001016 731.428571q0 7.972571-5.12 13.165714l-182.857143 182.857143q-5.12 5.12-13.165714 5.12-7.460571 0-12.873143-5.412571t-5.412571-12.873143l0-109.714286q-18.285714 0-48.566857 0.292571t-46.299429 0.585143-41.691429-0.585143-40.594286-2.852571-36.571429-5.997714-35.986286-10.605714-33.133714-16.310857-33.718857-22.820571-31.451429-30.573714-32.036571-39.716571q33.718857-53.174857 77.677714-156.013714 12.580571 25.746286 21.138286 41.398857t23.113143 36.278857 29.110857 32.256 35.986286 19.968 46.592 8.265143l146.285714 0 0-109.714286q0-7.972571 5.12-13.165714t13.165714-5.12q6.875429 0 13.677714 5.705143l182.272 182.272q5.12 5.12 5.12 13.165714zM1024.001016 219.428571q0 7.972571-5.12 13.165714l-182.857143 182.857143q-5.12 5.12-13.165714 5.12-7.460571 0-12.873143-5.412571t-5.412571-12.873143l0-109.714286-146.285714 0q-27.428571 0-49.737143 8.557714t-39.424 25.746286-29.110857 35.108571-25.746286 44.251429q-18.285714 35.401143-44.544 97.718857-16.603429 37.741714-28.306286 63.414857t-30.866286 59.977143-36.571429 57.124571-42.276571 47.396571-51.419429 39.131429-60.854857 23.990857-73.142857 9.435429l-128 0q-7.972571 0-13.165714-5.12t-5.12-13.165714l0-109.714286q0-7.972571 5.12-13.165714t13.165714-5.12l128 0q27.428571 0 49.737143-8.557714t39.424-25.746286 29.110857-35.108571 25.746286-44.251429q18.285714-35.401143 44.544-97.718857 16.603429-37.741714 28.306286-63.414857t30.866286-59.977143 36.571429-57.124571 42.276571-47.396571 51.419429-39.131429 60.854857-23.990857 73.142857-9.435429l146.285714 0 0-109.714286q0-7.972571 5.12-13.165714t13.165714-5.12q6.875429 0 13.677714 5.705143l182.272 182.272q5.12 5.12 5.12 13.165714z" p-id="5968"></path></svg>
                                         </div>
                                     </a>
                                 </li>
-                                <span class="navs-slider-bar"></span>
+                                <span id="navs-slider-bar" class="navs-slider-bar"></span>
                             </ul>
                         </div>
                         <div class="tab-content">
-                            <div id="widget-tabs-hot" class="tab-pane fade show active wrapper-lg h-w">
-                                hot
+                            <div id="widget-tabs-hot" class="tab-pane fade show active wrapper-lg h-w" role="tabpanel" aria-labelledby="widget-hot-tab">
+                                <h5 class="text-md m-t-none text-title">热门文章</h5>
+                                <ul class="list-group no-bg">
+                                    <li class="list-group-item no-border">test</li>
+                                    <li class="list-group-item no-border">test</li>
+                                    <li class="list-group-item no-border">test</li>
+                                    <li class="list-group-item no-border">test</li>
+                                    <li class="list-group-item no-border">test</li>
+                                </ul>
                             </div>
-                            <div id="widget-tabs-comment" class="tab-pane fade show wrapper-lg h-w">
-                                comment
+                            <div id="widget-tabs-comment" class="tab-pane fade show wrapper-lg h-w" role="tabpanel" aria-labelledby="widget-comment-tab">
+                                <h5 class="text-md m-t-none text-title">最新评论</h5>
                             </div>
-                            <div id="widget-tabs-random" class="tab-pane fade show wrapper-lg h-w">
-                                random
+                            <div id="widget-tabs-random" class="tab-pane fade show wrapper-lg h-w" aria-labelledby="widget-random-tab">
+                                <h5 class="text-md m-t-none text-title">随机文章</h5>
                             </div>
                         </div>
-                        </div>
+                    </div>
+                    <div class="widget-categories wrapper-lg f-col">
+                        <h5 class="text-md m-t-none text-title h-w">博客信息</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item opacity-eight">数字统计</li>
+                            <li class="list-group-item opacity-eight">评论数目</li>
+                            <li class="list-group-item opacity-eight">运行天数</li>
+                            <li class="list-group-item opacity-eight">最后活动</li>
+                        </ul>
+                    </div>
                 </div>
                 <a class="show-main"></a>
             </main>

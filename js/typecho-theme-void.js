@@ -42,7 +42,7 @@
     $(".show-main").click(pop_left_panel);
 
     $(window).resize(function() {
-        console.log($(window).width());
+        // console.log($(window).width());
         if ($(window).width() > 768 && $(".app-content").hasClass("move-right")) {
             $(".app-content").removeClass("move-right");
             $(".app-footer").removeClass("move-right");
@@ -163,6 +163,18 @@
             }
         }),
         !1)*/
-    })
+    });
+
+    // main-asider-header
+    $("#widget-hot-tab").click(function () {
+        $("#navs-slider-bar").css("transform", "translateX(55%)");
+    });
+    $("#widget-comment-tab").click(function () {
+        $("#navs-slider-bar").css("transform", "translateX(255%)");
+    });
+    $("#widget-random-tab").click(function () {
+        $("#navs-slider-bar").css("transform", "translateX(460%)");
+    });
+
 })(jQuery),
 console.log("\n %c Typecho-Theme-Void v0.1 %c by Zero Void | www.zerovoid.xyz ", "color:#eee;background:#444;padding:5px 0;", "color:#444;background:#eee;padding:5px 0;");
